@@ -1,38 +1,307 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ 
+body {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    background: linear-gradient(238deg, #87CEFA, #FFA07A, #FFD700, #9370DB, #FFFFE0, #00CED1, #FF69B4);
+    background-size: 1400% 1400%;
+
+    -webkit-animation: AnimationName 59s ease infinite;
+    -moz-animation: AnimationName 59s ease infinite;
+    animation: AnimationName 59s ease infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@-webkit-keyframes AnimationName {
+    0% { background-position: 0% 91% }
+    50% { background-position: 100% 10% }
+    100% { background-position: 0% 91% }
+}
+
+@-moz-keyframes AnimationName {
+    0% { background-position: 0% 91% }
+    50% { background-position: 100% 10% }
+    100% { background-position: 0% 91% }
+}
+
+@keyframes AnimationName {
+    0% { background-position: 0% 91% }
+    50% { background-position: 100% 10% }
+    100% { background-position: 0% 91% }
+}
+
+
+img{
+    max-width: 100%;
+
+}
+.logo-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    gap: 10px;
+}
+.logo{
+    max-width: 100px;
+    color: white;
+    background-color: #fff;
+}
+main{
+    padding: 50px 0;
+    background-color: #fff;
+    padding: 10px;
+    max-width: 900px;
+    margin: 0 auto;  
+    box-sizing: border-box;  
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.darkMode{
+    background-color: #fff;
+    color: black;
+}
+.lightMode{
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    header, .logo-section {
+        flex-direction: column;
+    }
+    
+}
+
+/* .header-nav a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 10px 25px;
+} */
+.darkModeLinkButton a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 10px 25px;
+    border: #333 3px solid;
+}
+.lightModeLinkButton a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 10px 25px;
+    border: #fff 3px solid;
+} 
+.darkModeLink a{
+    text-decoration: none;
+    color: black;
+}
+.lightModeLink a{
+    text-decoration: none;
+    color: white;
+} 
+
+header a.logo{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+header nav{
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-weight: bold;
+}
+
+div.post{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-columns: 1.1fr 0.9fr; */
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+    div.post{
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+    
+}
+div.post div.image{
+    width: 100%;
+    height: 100%;
+    
+}
+div.post div.image img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+div.post div.texts h2{
+    margin: 0;
+    font-size: 1.8rem;
+}
+div.post div.texts a {
+    text-decoration: none;
+    color: black;
+}
+div.post p.info{
+    margin: 6px 0;
+    font-size: .9rem;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+div.post p.info a.author{
+    color:#333
+}
+
+div.post p.summary{
+    margin: 10px 0;
+    line-height: 1.4;
+
+}
+
+form.login, form.register{
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 400px;
+}
+
+.login-image {
+    display: flex;
+    justify-content: center;
+}
+
+form input{
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 5px 7px;                                                            
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+button{
+    width: 100%;
+    display: block;
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+    padding: 7px 0;
+}
+
+form.login h1,form.register h1{
+    text-align: center;
+}
+
+div.post-page div.image{
+    max-height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+div.post-page div.image img{
+    object-fit: contain;
+    object-position: center center;
+    
+    
+}
+
+div.post-page h1{
+    text-align: center;
+}
+div.post-page time{
+    text-align: center;
+    display: block;
+    font-size: .8rem;
+    color: gray;
+}
+div.post-page h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: .9rem;
+}
+div.post-page p{
+    line-height: 1.5rem;
+}
+
+div.edit-row{
+    margin: 40px 0 50px;
+    text-align: center;
+}
+
+div.post-page a.edit-btn{
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* Footer.css */
+
+.footer {
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .footer-options {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .footer button,input{
+    width: 90%;
   }
+  .subscribe {
+    width: 300px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .subscribe input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .subscribe button {
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+@media screen and (max-width: 600px) {
+    .footer{
+        flex-direction: column;
+    }
 }
