@@ -16,10 +16,10 @@ const Post = ({post}) => {
           <Link to={`/post/${post._id}`}>
           <h2 className={mode?'darkMode':'lightMode'}>{post.title}</h2>
           </Link>
-          <p className={mode?'darkMode info':'lightMode info'}>
+          <div className={mode?'darkMode info':'lightMode info'}>
             <p>{post.author['username']}</p>
             <time>{formatISO9075(new Date(post.createdAt))}</time>
-          </p>
+          </div>
           <p className="summary">{post.summary}</p>
         </div>
       </div>
