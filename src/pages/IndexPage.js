@@ -1,16 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Post from '../components/Post'
-
+import { Search } from '../UserContext'
+import SearchBar from '../components/SearchBar'
 const IndexPage = () => {
   const [posts,setPosts] = useState([])
+  const {searchTerm} = useContext(Search)
+  const [filteredPosts,setFilterPosts] = useState(posts)
+  
+  useEffect(() => {
+    const regex = new RegExp(searchTerm, 'i');
+    setFilterPosts(posts.filter(post => regex.test(post.title)))
+  }, [searchTerm]);
   useEffect(()=>{
     fetch('http://localhost:4000/post',{
       method:'GET'
-    }).then(response=>response.json()).then(posts=>setPosts(posts))
+    }).then(response=>response.json()).then(posts=>{
+      setPosts(posts)
+      setFilterPosts(posts)})
   },[])
   return (
     <>
-    {posts.map(post=>{
+    <SearchBar/>
+    {filteredPosts.map(post=>{
       return <Post key={post._id} post={post} />
     })}
     </>

@@ -21,7 +21,6 @@ const Header = () => {
 
   function changeMode(){
     setMode(mode => !mode)
-    console.log(mode)
   }
 
   function logout(){

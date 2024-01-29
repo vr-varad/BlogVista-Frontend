@@ -255,6 +255,13 @@ div.post-page a.edit-btn{
     font-weight: bold;
     letter-spacing: 3px;
 }
+div.post-page .tools{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+
+}
+
 
 /* Footer.css */
 
@@ -305,3 +312,14 @@ div.post-page a.edit-btn{
         flex-direction: column;
     }
 }
+
+/* Search Barr */
+  .search {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .search-input{
+    padding: 5px;
+    margin-right: 5px;
+  }

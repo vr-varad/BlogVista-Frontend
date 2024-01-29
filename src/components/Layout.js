@@ -2,6 +2,7 @@ import React,{useContext} from 'react'
 import Header from './Header'
 import { Outlet } from 'react-router-dom'
 import {Mode} from '../UserContext'
+import SearchBar from './SearchBar'
 
 
 const Layout = () => {

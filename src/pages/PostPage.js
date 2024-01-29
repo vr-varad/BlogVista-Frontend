@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import {formatISO9075} from 'date-fns'
 import { UserContext,Mode } from '../UserContext'
 
+
 const PostPage = () => {
     const {mode} = useContext(Mode)
     const params = useParams()
@@ -29,6 +30,7 @@ const PostPage = () => {
             <div className='image'>
                 <img src={'http://localhost:4000/'+postinfo['cover']} alt={postinfo.title}></img>
             </div>
+            
             <div dangerouslySetInnerHTML={{__html: postinfo.content  }} className={mode?'darkMode':'lightMode'}/>
             {userInfo.id == postinfo.author._id? <div className='edit-row'>
                 <Link className='edit-btn' to={`/edit/${postinfo._id}`}>Edit the post</Link>
