@@ -66,6 +66,13 @@ header{
     align-items: center;
     margin-bottom: 50px;
 }
+.headerName{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
 .darkMode{
     background-color: #fff;
     color: black;
@@ -323,3 +330,40 @@ div.post-page .tools{
     padding: 5px;
     margin-right: 5px;
   }
+
+  /* User Profile */
+  .userProfilr{
+    border: 360px;
+  }
+
+  /* profile page */
+
+  .profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-photo img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .profile-info {
+    flex-grow: 1;
+  }
+  
+  .post-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  

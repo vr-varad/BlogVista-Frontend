@@ -10,6 +10,7 @@ import CreatePost from './pages/CreatePost';
 import PostPage from './pages/PostPage';
 import EditPost from './pages/EditPost';
 import Footer from './components/Footer';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/create' element={<CreatePost/>}/>
           <Route path='/post/:id' element={<PostPage/>}/>
           <Route path='/edit/:id' element={<EditPost/>}/>
+          <Route path='/profile/:id' element={<ProfilePage/>}/>
         </Route>
       </Routes>
       <Footer/>
