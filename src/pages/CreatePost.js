@@ -33,7 +33,7 @@ const CreatePost = () => {
         data.set('content',content)
         data.set('file',files[0])
         e.preventDefault()
-        const response = await fetch('https://blogvista-pl9x.onrender.com/post',{
+        const response = await fetch('http://blogvista-pl9x.onrender.com/post',{
             method:'POST',
             body: data,
             credentials: 'include'

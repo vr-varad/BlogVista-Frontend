@@ -6,7 +6,7 @@ const RegisterPage = () => {
   const [password,setPassword] = useState('')
   async function register(e){
     e.preventDefault()
-    const response = await fetch('https://blogvista-pl9x.onrender.com/register',{
+    const response = await fetch('http://blogvista-pl9x.onrender.com/register',{
       method:'POST',
       body: JSON.stringify({username,password,randNum:rand}),
       headers: {'Content-Type':'application/json'}

@@ -28,7 +28,7 @@ const PostPage = () => {
             <time>{formatISO9075(new Date(postinfo.createdAt))}</time>
             <h2 className='author'>By {postinfo.author.username}</h2>
             <div className='image'>
-                <img src={'https://blogvista-pl9x.onrender.com/'+postinfo['cover']} alt={postinfo.title}></img>
+                <img src={'http://blogvista-pl9x.onrender.com/'+postinfo['cover']} alt={postinfo.title}></img>
             </div>
             
             <div dangerouslySetInnerHTML={{__html: postinfo.content  }} className={mode?'darkMode':'lightMode'}/>
