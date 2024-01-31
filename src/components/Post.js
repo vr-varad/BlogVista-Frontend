@@ -9,7 +9,7 @@ const Post = ({post}) => {
     <div className="post">
         <div className="image">
           <Link to={`/post/${post._id}`}>
-            <img src={'http://blogvista-pl9x.onrender.com/'+post.cover} alt={post.title}></img>
+            <img src={'https://blogvista-pl9x.onrender.com/'+post.cover} alt={post.title}></img>
           </Link>
         </div>
         <div className='texts'>

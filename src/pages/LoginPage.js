@@ -9,7 +9,7 @@ const LoginPage = () => {
   const {setUserInfo} = useContext(UserContext)
   async function login(e){
     e.preventDefault()
-    const response = await fetch('http://blogvista-pl9x.onrender.com/login',{
+    const response = await fetch('https://blogvista-pl9x.onrender.com/login',{
       method: 'POST',
       body: JSON.stringify({
         username,password

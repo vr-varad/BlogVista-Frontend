@@ -30,7 +30,7 @@ const EditPost = () => {
     const [redirect, setRedirect] = useState(false)
     useEffect(()=>{
         async function fetchPost(){
-            const response = await fetch(`http://blogvista-pl9x.onrender.com/post/${id}`)
+            const response = await fetch(`https://blogvista-pl9x.onrender.com/post/${id}`)
             const data = await response.json()
             setTitle(data.article.title)
             setSummary(data.article.summary)
@@ -48,7 +48,7 @@ const EditPost = () => {
         if(files?.[0]){
             data.set('file',files?.[0])
         }
-        const response = await fetch(`http://blogvista-pl9x.onrender.com/post/${id}`,{
+        const response = await fetch(`https://blogvista-pl9x.onrender.com/post/${id}`,{
             method:'PUT',
             body: data,
             credentials: 'include'

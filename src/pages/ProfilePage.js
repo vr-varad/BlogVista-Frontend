@@ -10,10 +10,10 @@ const ProfilePage = () => {
     const {userInfo} = useContext(UserContext)
   const {id} = useParams()
   useEffect(()=>{
-    fetch('http://blogvista-pl9x.onrender.com/posts',{method:'GET'})
+    fetch('https://blogvista-pl9x.onrender.com/posts',{method:'GET'})
     .then(res=>res.json())
     .then(post=>setData(post.filter(singlePost => singlePost.author._id == id)))
-    fetch(`http://blogvista-pl9x.onrender.com/userProfile/${id}`,{method:'GET'})
+    fetch(`https://blogvista-pl9x.onrender.com/userProfile/${id}`,{method:'GET'})
     .then(res=>res.json())
     .then(user=>setUser(user))
 
