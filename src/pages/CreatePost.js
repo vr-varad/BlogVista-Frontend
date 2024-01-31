@@ -36,6 +36,7 @@ const CreatePost = () => {
         const response = await fetch('https://blogvista-pl9x.onrender.com/post',{
             method:'POST',
             body: data,
+            headers: {'Content-Type':'multipart/form-data'},
             credentials: 'include'
         })
         if(response.ok){
