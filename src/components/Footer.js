@@ -14,7 +14,7 @@ const Footer = () => {
       alert('Please provide email.')
       return
     }
-    await fetch('http://localhost:4000/subscribe',{
+    await fetch('https://blogvista-pl9x.onrender.com/subscribe',{
       method:'POST',
       body: JSON.stringify({reqEmail}),
       headers:{

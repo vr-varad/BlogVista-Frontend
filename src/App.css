@@ -347,6 +347,7 @@ div.post-page .tools{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    background-color: #dddcdc;
   }
   
   .profile-photo img {

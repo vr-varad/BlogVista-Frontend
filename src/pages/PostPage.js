@@ -12,7 +12,7 @@ const PostPage = () => {
     const {userInfo} = useContext(UserContext)
     useEffect(()=>{
         async function fetchPost(){
-            const response = await fetch(`http://localhost:4000/post/${params['id']}`)
+            const response = await fetch(`https://blogvista-pl9x.onrender.com/post/${params['id']}`)
             const data = await response.json()
             setPostInfo(data.article)
             setLoading(false)
@@ -28,7 +28,7 @@ const PostPage = () => {
             <time>{formatISO9075(new Date(postinfo.createdAt))}</time>
             <h2 className='author'>By {postinfo.author.username}</h2>
             <div className='image'>
-                <img src={'http://localhost:4000/'+postinfo['cover']} alt={postinfo.title}></img>
+                <img src={'https://blogvista-pl9x.onrender.com/'+postinfo['cover']} alt={postinfo.title}></img>
             </div>
             
             <div dangerouslySetInnerHTML={{__html: postinfo.content  }} className={mode?'darkMode':'lightMode'}/>

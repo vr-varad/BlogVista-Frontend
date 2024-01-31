@@ -9,7 +9,7 @@ const Header = () => {
   const {mode,setMode} = useContext(Mode)
   
   useEffect(()=>{
-    fetch('http://localhost:4000/profile',{
+    fetch('https://blogvista-pl9x.onrender.com/profile',{
       credentials: 'include',
       method: 'GET'
     }).then(response =>{
@@ -24,7 +24,7 @@ const Header = () => {
   }
 
   function logout(){
-    fetch('http://localhost:4000/logout',{
+    fetch('https://blogvista-pl9x.onrender.com/logout',{
       credentials: 'include',
       method:'POST'
     })

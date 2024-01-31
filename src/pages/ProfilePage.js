@@ -10,10 +10,10 @@ const ProfilePage = () => {
     const {userInfo} = useContext(UserContext)
   const {id} = useParams()
   useEffect(()=>{
-    fetch('http://localhost:4000/posts',{method:'GET'})
+    fetch('https://blogvista-pl9x.onrender.com/posts',{method:'GET'})
     .then(res=>res.json())
     .then(post=>setData(post.filter(singlePost => singlePost.author._id == id)))
-    fetch(`http://localhost:4000/userProfile/${id}`,{method:'GET'})
+    fetch(`https://blogvista-pl9x.onrender.com/userProfile/${id}`,{method:'GET'})
     .then(res=>res.json())
     .then(user=>setUser(user))
 
@@ -32,6 +32,7 @@ const ProfilePage = () => {
               <h2>{user.user.username}</h2>
               <p>Date of Joining: {`${user.user.updatedAt}`.slice(0, 10)}</p>
             </div>
+            
           </div>
             {data.map((post)=>{
                 return <Post key={post._id} post={post}/>

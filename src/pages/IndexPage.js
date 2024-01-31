@@ -12,7 +12,7 @@ const IndexPage = () => {
     setFilterPosts(posts.filter(post => regex.test(post.title)))
   }, [searchTerm]);
   useEffect(()=>{
-    fetch('http://localhost:4000/post',{
+    fetch('https://blogvista-pl9x.onrender.com/post',{
       method:'GET'
     }).then(response=>response.json()).then(posts=>{
       setPosts(posts)
