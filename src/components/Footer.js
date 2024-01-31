@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="footer-options">
         <Link to="/login">Login</Link>
         <Link to="/register">Register</Link>
-        <a href="#about">About Me</a>
+        <a href="https://varad-gupta.vercel.app/">About Me</a>
       </div>
       <div className="subscribe">
         <input type="email" placeholder="Subscribe to newsletter" value={email} onChange={e=>setEmail(e.target.value)}  />
