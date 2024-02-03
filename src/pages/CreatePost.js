@@ -34,6 +34,7 @@ const CreatePost = () => {
         data.set('file',files[0])
         e.preventDefault()
         const response = await fetch('https://blogvista-pl9x.onrender.com/post',{
+            mode: 'no-cors',
             method:'POST',
             body: data,
             credentials: 'include'
